@@ -1,0 +1,15 @@
+<h1><%= @director.name %></h1>
+
+<ul>
+  <!-- to link - 3 diff ways of linking  -->
+  <li><%= @director.nationality %></li>
+  <li><%= @director.dob %></li>
+
+
+<%= image_tag @director.image, :alt => @director.name, :class => 'feature' %>
+
+
+<div class = "controls">
+  <%= link_to 'Edit artist', edit_director_path(@director) %>
+  <%= link_to 'Delete artist', @director, :method =>'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>

@@ -1,0 +1,12 @@
+<h1>All Directors</h1>
+
+<% @directors.each do |director| %>
+<% if director.image.nil? %>
+  <%= image_tag director.image, :alt => director.name,  :class => 'thumb' %>
+<% end %>
+<ul>
+  <li><%= link_to director.name, director %></li>
+  <li><%= director.dob %></li>
+  <li><%= director.nationality %></li>
+</ul>
+<% end %>

@@ -2502,3 +2502,215 @@ Processing by RockpaperController#form as HTML
 Completed 200 OK in 21ms (Views: 17.8ms)
 
 
+Started GET "/rails/info" for 127.0.0.1 at 2018-03-27 17:55:05 +1100
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 124ms
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-03-27 17:55:05 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/soniabansal/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/soniabansal/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (2.9ms)
+  Rendered /Users/soniabansal/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.4ms)
+  Rendered /Users/soniabansal/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 31ms (Views: 25.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-27 17:55:06 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 197ms (Views: 196.0ms)
+
+
+Started GET "/rockpaper" for 127.0.0.1 at 2018-03-27 17:55:08 +1100
+Processing by RockpaperController#form as HTML
+  Rendering rockpaper/form.html.erb within layouts/application
+  Rendered rockpaper/form.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 19.6ms)
+
+
+Started GET "/rockpaper/lookup?throw=Rock" for 127.0.0.1 at 2018-03-27 17:55:12 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Rock"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 19.3ms)
+
+
+Started GET "/rockpaper/lookup?throw=Scissors" for 127.0.0.1 at 2018-03-27 17:55:18 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Scissors"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 17.6ms)
+
+
+Started GET "/rockpaper/lookup?throw=Paper" for 127.0.0.1 at 2018-03-27 17:55:26 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Paper"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 16.8ms)
+
+
+Started GET "/rockpaper/lookup?throw=Rock" for 127.0.0.1 at 2018-03-27 17:55:32 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Rock"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 16.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-27 17:55:35 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-27 17:56:37 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.1ms)
+
+
+Started GET "/magicball" for 127.0.0.1 at 2018-03-27 17:56:40 +1100
+Processing by MagicballController#form as HTML
+  Rendering magicball/form.html.erb within layouts/application
+  Rendered magicball/form.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 19.7ms)
+
+
+Started GET "/magicball/lookup?quest=how+is+your+day+going%3F" for 127.0.0.1 at 2018-03-27 17:56:54 +1100
+Processing by MagicballController#lookup as HTML
+  Parameters: {"quest"=>"how is your day going?"}
+  Rendering magicball/lookup.html.erb within layouts/application
+  Rendered magicball/lookup.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 17.9ms)
+
+
+Started GET "/magicball" for 127.0.0.1 at 2018-03-27 17:56:58 +1100
+Processing by MagicballController#form as HTML
+  Rendering magicball/form.html.erb within layouts/application
+  Rendered magicball/form.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 17.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-27 17:57:01 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 19.6ms)
+
+
+Started GET "/secretno" for 127.0.0.1 at 2018-03-27 17:57:03 +1100
+Processing by SecretnoController#form as HTML
+  Rendering secretno/form.html.erb within layouts/application
+  Rendered secretno/form.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 17.7ms)
+
+
+Started GET "/secretno/lookup?secretno=3" for 127.0.0.1 at 2018-03-27 17:57:05 +1100
+Processing by SecretnoController#lookup as HTML
+  Parameters: {"secretno"=>"3"}
+  Rendering secretno/lookup.html.erb within layouts/application
+  Rendered secretno/lookup.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 18.3ms)
+
+
+Started GET "/secretno" for 127.0.0.1 at 2018-03-27 17:57:08 +1100
+Processing by SecretnoController#form as HTML
+  Rendering secretno/form.html.erb within layouts/application
+  Rendered secretno/form.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-27 17:57:10 +1100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 20.6ms)
+
+
+Started GET "/rockpaper" for 127.0.0.1 at 2018-03-27 17:57:11 +1100
+Processing by RockpaperController#form as HTML
+  Rendering rockpaper/form.html.erb within layouts/application
+  Rendered rockpaper/form.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 21.6ms)
+
+
+Started GET "/rockpaper/lookup?throw=Paper" for 127.0.0.1 at 2018-03-27 17:57:13 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Paper"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 19.9ms)
+
+
+Started GET "/rockpaper/lookup?throw=Rock" for 127.0.0.1 at 2018-03-27 17:57:18 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Rock"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 17.9ms)
+
+
+Started GET "/rockpaper/lookup?throw=Scissors" for 127.0.0.1 at 2018-03-27 17:57:23 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Scissors"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 17.6ms)
+
+
+Started GET "/rockpaper/lookup?throw=Paper" for 127.0.0.1 at 2018-03-27 17:57:32 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Paper"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 17.7ms)
+
+
+Started GET "/rockpaper/lookup?throw=Paper" for 127.0.0.1 at 2018-03-27 17:57:39 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Paper"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 16.9ms)
+
+
+Started GET "/rockpaper/lookup?throw=Rock" for 127.0.0.1 at 2018-03-27 17:57:44 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Rock"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 20.1ms)
+
+
+Started GET "/rockpaper/lookup?throw=Paper" for 127.0.0.1 at 2018-03-27 17:57:48 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Paper"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 19.9ms)
+
+
+Started GET "/rockpaper/lookup?throw=Scissors" for 127.0.0.1 at 2018-03-27 17:57:55 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Scissors"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 17.6ms)
+
+
+Started GET "/rockpaper/lookup?throw=Scissors" for 127.0.0.1 at 2018-03-27 17:57:57 +1100
+Processing by RockpaperController#lookup as HTML
+  Parameters: {"throw"=>"Scissors"}
+  Rendering rockpaper/lookup.html.erb within layouts/application
+  Rendered rockpaper/lookup.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 16.8ms)
+
+

@@ -1,0 +1,25 @@
+<h2><%= @mountain.name %></h2>
+<% if @mountain.image.present? %>
+  <%= image_tag @mountain.image, :alt => @mountain.name, :class => 'feature' %>
+<% end %>
+<table>
+  <thead>
+    <tr>
+      <td>name</td>
+      <td>place</td>
+      <td>height</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @mountain.name %></td>
+      <td><%= @mountain.place %></td>
+      <td><%= @mountain.height %></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="controls">
+  <%= link_to 'Edit Mountain', mountains_edit_path(@mountain.id) %>
+  <%= button_to 'Delete Mountain', mountain_path(@mountain.id), :method => 'delete' %>
+</div>
