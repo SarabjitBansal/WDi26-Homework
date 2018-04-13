@@ -1,0 +1,29 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.labels {
+  display: inline-block;
+  padding: 10px;
+}
+.from {
+  padding-right: 100px;
+  display: inline-block;
+}
+.to{
+    /* padding-right: -120px; */
+    display: inline-block;
+}
+.station{
+  display: block;
+  padding: 10px;
+
+}
+
+.form {
+  display: inline-block;
+  padding: 10px;
+}

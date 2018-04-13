@@ -1,0 +1,30 @@
+.container {
+
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+body {
+    /* background-color: #ccc; */
+}
+
+#images img {
+  max-width: 12em;
+  max-height: 12em;
+  display: flex;
+
+}
+
+.info {
+  display: inline-block;
+}
+
+
+/* #images{
+  position: relative;
+
+}
+#textimg {
+  position: absolute;
+  right: 0;
+} */
