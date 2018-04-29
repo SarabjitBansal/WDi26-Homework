@@ -3,28 +3,62 @@
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
-}
-body {
-    /* background-color: #ccc; */
+  vertical-align: center;
+  /* background-color: #0fb8ad; */
+  /* display: flex; */
+
 }
 
+.header {
+  padding: 20px;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    text-align: left;
+}
+#query {
+
+  padding: 30px;
+  font-size: 20px;
+  /* width:70%; */
+  height: 3em;
+}
 #images img {
-  max-width: 12em;
-  max-height: 12em;
-  display: flex;
+  width: 17em;
+  height: 17em;
 
 }
 
-.info {
-  display: inline-block;
+.info{
+  margin-top: 20px;
+  border-top: 1px solid #2cb5e8;
+  width:100%;
 }
 
-
-/* #images{
+.otherinfo {
+  width: 70%;
+  float: right;
+  /* position: relative; */
+  height:20em;
+}
+.otherinfo p {
+  height: 17em;
   position: relative;
-
+  text-align: left;
+  /* text-rendering: auto; */
 }
-#textimg {
+
+#images {
+  margin-top: 20px;
+  position: relative;
+  width: 17em;
+  /* width:20%; */
+  float: left;
+}
+
+#images .textImg {
+  /* top: 0; */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  text-align: center;
   position: absolute;
-  right: 0;
-} */
+}

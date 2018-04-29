@@ -1,4 +1,4 @@
-<div class ="alignn">
+
 
 
 
@@ -11,21 +11,28 @@
         <div class="to">
           <%= label_tag :"To Station" %>
         </div>
-
     </div>
-
-
       <div class="station">
         <%  @path.each do |key, value| %>
-          <%= select_tag "fromstation", options_for_select(value) %>
-          <%= select_tag "tostation", options_for_select(value) %>
+        <div class="froms">
+            <%= select_tag "fromstation", options_for_select(value) %>
+        </div>
+
+          <div class="tos">
+              <%= select_tag "tostation", options_for_select(value) %>
+          </div>
+
         <% end %>
       </div>
-      <%= submit_tag("Search", :id=>"search1") %>
+      <%= submit_tag("GO", :id=>"search1") %>
+      <div class="disp">
+
+        <p>Trip : <span id = "plannedtrip"><%= @plannedtrip %></span></p>
+        
+      </div>
   </div>
 
-  <p>Trip : <span id = "plannedtrip"><%= @plannedtrip %></span></p>
+
 
 
   <% end %>
-</div>

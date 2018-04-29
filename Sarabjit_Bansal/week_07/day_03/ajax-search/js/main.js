@@ -72,13 +72,26 @@ const showImages = function(results) {
 
 // for each photos
   results._embedded.events.forEach(function(photo) {
-    const thumbnailURL =  photo.images[2].url; //generateURL(photo.images[2].url); //
-    const thumbnailURL1 =  photo.url; //generateURL(photo.images[2].url); //
+    const thumbnailURL =  photo.images[1].url; //generateURL(photo.images[2].url); //
+    const thumbnailURL1 =  photo.url;
+     //generateURL(photo.images[2].url); //
+    // console.log(photo.url);
 // debugger;
     const dateEvent =  photo.dates.start.localDate; //generateURL(photo.images[2].url); //
     const timeEvent =  photo.dates.start.localTime;
-    const infoEvent =  photo.info;
-    const noteEvent =  photo.pleaseNote;
+
+    let infoEvent ="";
+    let noteEvent = "";
+
+    if (photo.info) {
+       infoEvent =  photo.info;
+    }
+
+    if (photo.pleaseNote) {
+       noteEvent =  photo.pleaseNote;
+    }
+
+
     let PriceRange ="";
     if (photo.priceRanges) {
       const maxPriceEvent =  photo.priceRanges[0].max;
@@ -86,34 +99,69 @@ const showImages = function(results) {
       const CurrEvent =  photo.priceRanges[0].currency;
        PriceRange = CurrEvent +" "+ minPriceEvent + "-" + maxPriceEvent;
     }
+// const $div = $('<div />');
+// $div.html(`<p>${photo.name} on ${dateEvent} at ${timeEvent}</p> <p>${PriceRange} </p><p>${infoEvent} </p> <p>${noteEvent} </p><img src="${thumbnailURL}"/>`),
+
 
 
     // const PriceRange=""
     // a._embedded.events[0].images[0].url
     // console.log(dateEvent);
-    // const $img = $('<img />', {src: thumbnailURL}); //.attr('src',thumbnailURL)
-    // const $p = $('<p />');
-    const $div = $('<div />');
+
     // $p.text (photo.name)
     // console.log($p);
     // $div.html($p);
-    $div.html(`<p>${photo.name} on ${dateEvent} at ${timeEvent}</p> <p>${PriceRange} </p><p>${infoEvent} </p> <p>${noteEvent} </p><img src="${thumbnailURL}"/>`),
-
-    // const $p = (photo) //.attr('src',thumbnailURL)
-    $('#images').append($div);
-
-    $div.on('click',function(){ // event delegation
-      console.log('clicked');
-      // let imglnk = $img.src
-      // window.open(imglnk);
-      window.open(thumbnailURL1);
-      // window.open(generateURL(photo, 'b'));
-    })
-
+    // <img src="${thumbnailURL}"/>
+    // $p.html(`${photo.name} on ${dateEvent} at ${timeEvent}.${PriceRange} </p><p>${infoEvent}.${noteEvent}`);
+    // const $p = $('<p />');
     // console.log($p.name);
     // $p.name.)appendTo('#images');
     // $('#textimg').append($p);
-    $('#images').append($div);
+    // $('#images').append($div);
+// const $p = (photo) //.attr('src',thumbnailURL)
+
+
+
+    // const $img = $('<img />', {src: thumbnailURL});
+    const $img = $('<img />', {src: thumbnailURL});
+
+    let $a =   $('<a />').attr({ href:thumbnailURL1 });
+    $a.append($img);
+    // $img.attr('href', thumbnailURL1);
+    const $p= $('<p />');
+    $p.html(`${photo.name} on ${dateEvent} at ${timeEvent} `); //
+    const $div = $('<div />').addClass("textImg");
+    $div.html($p);
+    var rule = '<hr />';
+
+
+    $('#images').append($div,$a);
+
+    ///
+
+
+    const $p1= $('<p />');
+    $p1.html(`${infoEvent}`); //${noteEvent}
+    // $p1.css({'height':($(".images img").height()+'px')});
+    // $p1.css({'height':17'em')});
+
+    $('.otherinfo').append($p1); //.css("height", "+=50")'
+     // $(".otherinfo").css({'height':($(".images").height()+'px')})
+    // $('otherinfo').width($('otherinfo').width() + 50);
+    // width: 17em;
+    ///
+    //
+    // $('.otherinfo').css({"border-color": "#C1E0FF",
+    //          "border-weight":"1px",
+    //          "border-style":"solid"});
+
+    $('#images').on('click',function(){
+      // var str=$("#images a").attr("href");
+      //      alert(str);
+      // window.open($('#images a').text());
+    })
+
+
   });
 
 };

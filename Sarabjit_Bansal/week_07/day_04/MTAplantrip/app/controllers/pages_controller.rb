@@ -1,17 +1,17 @@
 class PagesController < ApplicationController
-  def plannedtrip
-    fromstation = params[:fromstation]
-    tostation= params[:tostation]
-    stl1 = fromstation.chars.first(5).join
-    stl2= tostation.chars.first(5).join
-    stst1 = fromstation.remove(stl1+":")
-    stst2 = tostation.remove(stl2+":")
-
-    plantrip(stl1,stst1,stl2,stst2)
-      # raise "hell"
-    plannedtrip = $journey
-    render :plain =>  plannedtrip
-  end
+  # def plannedtrip
+  #   fromstation = params[:fromstation]
+  #   tostation= params[:tostation]
+  #   stl1 = fromstation.chars.first(5).join
+  #   stl2= tostation.chars.first(5).join
+  #   stst1 = fromstation.remove(stl1+":")
+  #   stst2 = tostation.remove(stl2+":")
+  #
+  #   plantrip(stl1,stst1,stl2,stst2)
+  #     # raise "hell"
+  #   plannedtrip = $journey
+  #   render :plain =>  plannedtrip
+  # end
 
   def info
     fromstation = params[:fromstation]
@@ -82,19 +82,19 @@ def plantrip(startLine, startStop, endLine, endStop)
 # raise "hell"
   #  if starting and stopping point is same as intersection point i.e union square.
   if (startStop == instpoint && endStop == instpoint)
-      $journey = "You are already at ${instpoint}. Change to Line: #{endLine}"
+      $journey = "You are already at #{instpoint}.Change to Line: #{endLine}."
       # puts($journey);
   else
     if startLine == endLine
-        $journey = "You must travel through the following stops on line #{startLine} :"
+        $journey = "You must travel through the following stops on line #{startLine}. :"
         trackLoc(firstIndex, secIndex, startLine);
     else
-        $journey = "You must travel through the following stops on line #{startLine} :"
+        $journey = "You must travel through the following stops on line #{startLine}. :"
         instindex = $path[startLine].index(instpoint);
         trackLoc(firstIndex, instindex, startLine);
         instindex = $path[endLine].index(instpoint);
         if secIndex != instindex
-          $journey += "\nChange at #{instpoint} to Line: #{endLine}.Your journey continues through the following stops:"
+          $journey += "Change at #{instpoint} to Line: #{endLine}.Your journey continues through the following stops:"
           if (instindex < secIndex)
             trackLoc(instindex + 1, secIndex, endLine)
           else
@@ -102,11 +102,13 @@ def plantrip(startLine, startStop, endLine, endStop)
           end
 
         else
-            $journey += " You are already at #{instpoint}. Change to Line: #{endLine}"
+            $journey += "You are already at #{instpoint}. Change to Line: #{endLine}"
         end
     end
   end
+
   # puts"There are #{$noofstops} Stops in Total. #{$journey}"
 end
 # return $journey;
+
 end
